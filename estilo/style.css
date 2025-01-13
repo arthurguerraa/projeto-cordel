@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
 :root{
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,11 +8,9 @@
     --fonte3: 'Sriracha', cursive;
 }
 
-
 *{
     margin: 0px;
     padding: 0px;
-    font-size: 1em;
 }
 
 html, body{
@@ -26,14 +23,14 @@ header{
     background-color: black;
     color: white;
     text-align: center;
+    font-family: var(--fonte2);
 }
 
 header > h1{
     padding-top: 50px;
+    /*text-transform: uppercase;*/
     font-variant: small-caps;
-    font-family: var(--fonte2);
-    font-size: 10vh;
-    /*text-transform: uppercase; deixa a fonte maiúscula*/
+    font-size: 10vw; /* a fonte será do tamanho de 10% da largura da viewport fazendo com que ela se adapte de acordo com o tamanho da janela do navegador*/
 }
 
 header > p{
@@ -51,12 +48,12 @@ header a:hover, footer a:hover{
 }
 
 section{
-    padding-top: 10vh;
+    padding-top: 10vh; /* usar vh em vez de px faz com que o padding seja responsivo de acordo com o tamanho da tela*/
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--fonte3);
-    font-size: 3.5vw;
+    font-size: 3.5vw; /* a fonte será do tamanho de 10% da largura da viewport fazendo com que ela se adapte de acordo com o tamanho da janela do navegador*/
 }
 
 section > p{
@@ -71,30 +68,31 @@ section.normal{
 section.imagem{
     background-color: rgb(51, 51, 51);
     color: white;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.295);
-    background-size: cover;
-    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    /* Efeito Paralax */
+    background-size: cover; /* faz com que uma imagem de fundo seja redimensionada de maneira que cubra completamente o elemento ao qual está aplicada, sem deixar áreas vazias. */
+    background-attachment: fixed; /* faz com que a imagem fique fixa na rolagem de tela*/
 }
 
 section.imagem > p{
-    display: inline-block;
-    padding: 5px;
+    display: inline-block; /* caixa que se adapta ao tamanho do conteúdo*/
     background-color: rgba(0, 0, 0, 0.514);
     text-shadow: 1px 1px 0px black;
+
 }
 
 section#img01{
     background-image: url('../imagens/background001.jpg');
-    background-position: right center;
 }
 
 section#img02{
     background-image: url('../imagens/background002.jpg');
+    background-position: right center;
 }
 
 footer{
     background-color: black;
-    color: white;
     text-align: center;
+    color: white;
     padding: 10px;
 }
